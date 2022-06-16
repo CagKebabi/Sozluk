@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* 
+<input type="text" value={inputValue} onChange={(e)  => {
+  setValue(e.target.value)
+  if (inputValue == arrayE[0]) {
+    document.getElementById('deneme').innerHTML = arrayT[0]
+  } else if (inputValue == arrayE[1]) {
+    document.getElementById('deneme').innerHTML = arrayT[1]
+  } else if (inputValue == arrayE[2]) {
+    document.getElementById('deneme').innerHTML = arrayT[2]
+  } else if (inputValue == arrayE[3]) {
+    document.getElementById('deneme').innerHTML = arrayT[3]
+  } else if (inputValue == arrayE[4]) {
+    document.getElementById('deneme').innerHTML = arrayT[4]
+  } else {
+    document.getElementById('deneme').innerHTML = "sonuç bulunamadı"
+  }
+}}/>    
+<div id="deneme"></div> */
