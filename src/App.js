@@ -53,7 +53,7 @@ function App() {
          </div>
          <div className="texBox-Btn-Container">
 
-         <p className="logo">Techno Soft İngilizce-Türkçe Sözlük</p>
+         <p className="logo">Techno Soft İngilizce-Türkçe Sözlük.</p>
           <input placeholder="Text" className="textBox" type="text" value={inputValue} onChange={(e)  => {
           setCevap("")
           document.getElementById('result').innerHTML=""
