@@ -1,13 +1,15 @@
+/*14-28 arası:
+ara isimli fonksiyonumuzu oluşturduk bu fonksiyon import ettiğimiz english txt klasörümüze ulaştık.
+18 then içinde .text metodu ile dosyamızın metnini aldık.Ardından 2nci then de bu metni yani data yı 
+split metodu ile her bir satır bir indexi ifade etmesi için kullandık ve bunu kelimeler değişkenimize aktardık
+Bu indexlerimizi .map metodu bir döngüye soktuk gelen index içeriklerimizi yani datayı 24.satırda split metodu
+kullanarak - lerden itibaren böl dedik */
+
 import { useState,useEffect } from "react";
 import "./App.css";
-import txtfile from "./data.txt"
-import turkce from "./turkce.txt"
 import english from "./english.txt"
-// import logo from "./bg1.jpg"
 
-const arrayE = ["Apple", "Fish", "Computer", "Cloth", "Tiger"];
-const arrayT = ["elma", "balık", "bilgisayar", "kıyafet", "kaplan"]
-const background = ["deneme1.jpeg","deneme2.jpeg","deneme3.jpg"]
+const background = ["bg1.jpg","deneme2.jpeg","deneme3.jpg"]
 
 function App() {
   const [inputValue, setValue] = useState ("");
@@ -21,9 +23,11 @@ function App() {
       const kelimeler = data.split("\n") //Belirtilen ifade satır sonunu ifade eder \n yani burada her satırı bölmüş olduk
       kelimeler.map((data,key) => {
         const bolme = data.split("–")
-        console.log(bolme[0])
+        // console.log(bolme[1])
         if (bolme[0].trim().toLowerCase() == kelime){
           document.getElementById('result').innerHTML += bolme[1]+"<br/>"
+        } else if (bolme[1].trim().toLowerCase() == kelime) {
+          document.getElementById('result').innerHTML += bolme[0]+"<br/>"
         }
       })
     })
@@ -36,14 +40,15 @@ function App() {
   //   console.log(bgIndex)
   //   const bgImage = background[bgIndex]
   //   document.getElementById('app').style.background = `url(./${bgImage})`
+  //   document.getElementById('app').style.backgroundSize = "100vw 100vh"
   //   if (bgIndex < background.length-1) {
   //     setIndex(bgIndex+1)
   //   } else {
   //     setIndex(0)
   //   }
     
-  //  },15000)
-  // });
+  //  },10000)
+  // ;
 
   return (
     <div id="app" className="app" >
